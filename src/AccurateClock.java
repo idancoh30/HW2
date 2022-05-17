@@ -35,5 +35,8 @@ public class AccurateClock extends Clock {
         return super.hashCode()*60+seconds;
     }
 
+    public int getSeconds() {
+        return seconds;
+    }
 }
 

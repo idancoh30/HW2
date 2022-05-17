@@ -36,24 +36,13 @@ public class Clock {
     }
 
     @Override
-    public boolean equalsss(Object other) {
+    public boolean equals(Object other) {
         if (!(other instanceof Clock)) {
             return false;
         }
-        Clock otherClock = (Clock) other;
-        return this.hours == otherClock.hours && this.minutes == otherClock.minutes;
+        return this.toString().equals(other.toString());
     }
 
-    @Override
-    public boolean equals(Object other)
-    {
-        if(other instanceof Clock)
-        {
-            Clock otherClock = (Clock) other;
-            return this.hours == otherClock.hours && this.minutes == otherClock.minutes;
-        }
-        return false;
-    }
     // Count minutes passed from 00:00
     @Override
     public int hashCode() {

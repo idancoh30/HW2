@@ -13,10 +13,7 @@ public class Main {
         Object o2 = c2;
         System.out.println("c1 with o1: " + c1.equals(o1));
         System.out.println("o1 with c1: " + o1.equals(c1));
-
-        c1.equals(ac1);
         System.out.println("c1 with ac1: " + c1.equals(ac1));
-
         System.out.println("ac1 with c1: " + ac1.equals(c1));
         System.out.println("c1 with c2: " + c1.equals(c2));
         System.out.println("c2 with c1: " + c2.equals(c1));
@@ -40,7 +37,7 @@ public class Main {
         System.out.println("o2: " + o2);
         System.out.println("new: " + new AccurateClock(5, 6, 3));
     }
-
+}
     /*
     private static void testPartB() {
         System.out.println("--------------- Tests for part B ---------------");
@@ -171,8 +168,7 @@ public class Main {
 
         Addition exp4 = new Addition(exp3, parsed6);
         printExpression(exp4, "exp4");
-    }*/
-    /*
+    }
 
     private static void printExpression(Expression exp, String name, boolean withClass) {
         System.out.println(name + ": " + exp);
@@ -187,5 +183,5 @@ public class Main {
 
     private static void printExpression(Expression exp, String name) {
         printExpression(exp, name, false);
-    }*/
-}
+    }/*
+     */
