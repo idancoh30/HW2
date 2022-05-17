@@ -15,6 +15,6 @@ public class DoubleLiteral extends Expression {
 
     @Override
     public String toString() {
-        return Double.toString(value);
+        return "("+value+")";
     }
 }

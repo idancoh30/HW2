@@ -12,6 +12,6 @@ public class IntegerLiteral extends Expression{
 
     @Override
     public String toString(){
-       return Integer.toString(value);
+        return "("+value+")";
     }
 }

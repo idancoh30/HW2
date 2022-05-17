@@ -15,5 +15,4 @@ public class Addition<N extends Number> extends Expression{
     {
         return "(("+firstOp.doubleValue()+")"+" + ("+secondOp.doubleValue()+"))";
     }
-
 }

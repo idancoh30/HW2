@@ -1,8 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        MultiAddition<Double> multiAddition = new MultiAddition(1.5, 2, 3);
-        System.out.println(multiAddition.evaluate());
-        System.out.println(multiAddition.toString());
+        IntegerLiteral a = new IntegerLiteral(3);
+        System.out.println(a.toString());
         //testPartA();
         //testPartB();
     }
@@ -22,7 +21,6 @@ public class Main {
         System.out.println("c2 with c1: " + c2.equals(c1));
         System.out.println("c1 with o2: " + c1.equals(o2));
         System.out.println("o2 with c1: " + o2.equals(c1));
-
         System.out.println("ac1 with c2: " + ac1.equals(c2));
         System.out.println("c2 with ac1: " + c2.equals(ac1));
         System.out.println("ac1 with o2: " + ac1.equals(o2));
