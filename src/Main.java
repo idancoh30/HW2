@@ -1,8 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        MultiAddition<Double> multiAddition = new MultiAddition(1.5, 2, 3);
-        System.out.println(multiAddition.evaluate());
-        System.out.println(multiAddition.toString());
+        //testPartA();
         //testPartA();
         //testPartB();
     }

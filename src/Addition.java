@@ -1,18 +1,23 @@
-public class Addition<N extends Number> extends Expression{
-    private N firstOp, secondOp;
-    public Addition(N first, N second)
+public class Addition extends Expression{
+    Expression firstOp;
+    Expression secondOp;
+
+    public Addition(Expression first, Expression second)
     {
-        this.firstOp = first;
-        this.secondOp = second;
-    }
-    @Override
-    public double evaluate() {
-        return firstOp.doubleValue() + secondOp.doubleValue();
+        firstOp = first;
+        secondOp = second;
     }
 
-    @Override
+    public double evaluate()
+    {
+        return firstOp.evaluate() + secondOp.evaluate();
+    }
+
     public String toString()
     {
-        return "(("+firstOp.doubleValue()+")"+" + ("+secondOp.doubleValue()+"))";
+        return "(("+firstOp.evaluate()+")"+" + ("+secondOp.evaluate()+"))";
     }
+
+
+
 }
