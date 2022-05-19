@@ -1,18 +1,19 @@
-public class Multiplication<N extends Number> extends Expression{
-    private N firstOp, secondOp;
-    public Multiplication(N first, N second)
+public class Multiplication extends Expression{
+    private Expression firstOp;
+    private Expression secondOp;
+    public Multiplication(Expression first, Expression second)
     {
         this.firstOp = first;
         this.secondOp = second;
     }
     @Override
     public double evaluate() {
-        return firstOp.doubleValue() * secondOp.doubleValue();
+        return firstOp.evaluate() * secondOp.evaluate();
     }
 
     @Override
     public String toString()
     {
-        return "(("+firstOp.doubleValue()+")"+" * ("+secondOp.doubleValue()+"))";
+        return "(("+firstOp.evaluate()+")"+" * ("+secondOp.evaluate()+"))";
     }
 }

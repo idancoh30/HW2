@@ -1,19 +1,20 @@
-public class Division<N extends Number> extends Expression{
-    private N firstOp, secondOp;
-    public Division(N first, N second)
+public class Division extends Expression{
+    private Expression firstOp;
+    private Expression secondOp;
+    public Division(Expression first, Expression second)
     {
         this.firstOp = first;
-        if(second.doubleValue() != 0)
+        if(second.evaluate() != 0)
             this.secondOp = second;
     }
     @Override
     public double evaluate() {
-        return firstOp.doubleValue() / secondOp.doubleValue();
+        return firstOp.evaluate() / secondOp.evaluate();
     }
 
     @Override
     public String toString()
     {
-        return "(("+firstOp.doubleValue()+")"+" / ("+secondOp.doubleValue()+"))";
+        return "(("+firstOp.evaluate()+")"+" / ("+secondOp.evaluate()+"))";
     }
 }

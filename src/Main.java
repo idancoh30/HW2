@@ -1,5 +1,9 @@
 public class Main {
     public static void main(String[] args) {
+        Division d1 = new Division(new IntegerLiteral(1), new IntegerLiteral(2));
+        MultiMultipication ma = new MultiMultipication(new IntegerLiteral(1), new IntegerLiteral(2), new IntegerLiteral(3), new DoubleLiteral(3.43));
+        System.out.println(ma.toString());
+        System.out.println(ma.evaluate());
         //testPartA();
         //testPartA();
         //testPartB();

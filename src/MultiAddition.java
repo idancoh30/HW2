@@ -1,7 +1,7 @@
-public class MultiAddition<N extends Expression> extends Expression {
-    private N[] operands;
+public class MultiAddition extends Expression {
+    private Expression[] operands;
 
-    public MultiAddition(N... opr) {
+    public MultiAddition(Expression... opr) {
         operands=opr;
     }
 

@@ -1,11 +1,11 @@
 public class Addition extends Expression{
-    Expression firstOp;
-    Expression secondOp;
+    private Expression firstOp;
+    private Expression secondOp;
 
     public Addition(Expression first, Expression second)
     {
-        firstOp = first;
-        secondOp = second;
+        this.firstOp = first;
+        this.secondOp = second;
     }
 
     public double evaluate()
