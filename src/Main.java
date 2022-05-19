@@ -1,5 +1,11 @@
 public class Main {
     public static void main(String[] args) {
+//        RoundedExpression s = new RoundedExpression (new DoubleLiteral(12.45), 1);
+//        System.out.println(s.evaluate());
+//        System.out.println(s.toString());
+        UnaryMinus k = new UnaryMinus (new IntegerLiteral(-12));
+        System.out.println(k.evaluate());
+        System.out.println(k.toString());
         //testPartA();
         //testPartA();
         //testPartB();
