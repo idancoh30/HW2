@@ -3,10 +3,13 @@ public class DoubleLiteral extends Expression {
     public DoubleLiteral(){
         value = 0;
     }
+
+
     public DoubleLiteral(double value)
     {
         this.value = value;
     }
+
 
     @Override
     public double evaluate() {
