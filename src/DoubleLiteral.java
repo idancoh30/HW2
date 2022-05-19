@@ -1,12 +1,11 @@
 public class DoubleLiteral extends Expression {
-    protected double value;
-    public DoubleLiteral(){
+    private double value;
+
+    public DoubleLiteral() {
         value = 0;
     }
 
-
-    public DoubleLiteral(double value)
-    {
+    public DoubleLiteral(double value) {
         this.value = value;
     }
 
@@ -18,6 +17,6 @@ public class DoubleLiteral extends Expression {
 
     @Override
     public String toString() {
-        return "("+value+")";
+        return "(" + value + ")";
     }
 }
