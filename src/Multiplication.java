@@ -6,6 +6,7 @@ public class Multiplication extends Expression{
         this.firstOp = first;
         this.secondOp = second;
     }
+
     @Override
     public double evaluate() {
         return firstOp.evaluate() * secondOp.evaluate();
