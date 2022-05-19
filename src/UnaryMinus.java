@@ -1,18 +1,18 @@
-public class UnaryMinus <N extends Number> extends Expression {
+public class UnaryMinus extends Expression {
 
-    private N opr;
+    private Expression opr;
 
-    public UnaryMinus(N opr) {
+    public UnaryMinus(Expression opr) {
         this.opr = opr;
     }
 
     @Override
-    public double evaluate() {return (-1)*opr.doubleValue();
+    public double evaluate() {return (-1)*opr.evaluate();
     }
 
     @Override
     public String toString() {
-        return "(-(" + opr.doubleValue() + "))";
+        return "(-(" + opr.evaluate() + "))";
     }
 
 }
