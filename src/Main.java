@@ -1,7 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        testPartA();
-        testPartB();
+        ExpressionParser polishParser = new PolishNotationParser();
+        Expression parsed1 = polishParser.parse("1.5");
+        printExpression(parsed1, "parsed1", true);
+        //testPartA();
+        //testPartB();
     }
 
     private static void testPartA() {
@@ -136,6 +139,7 @@ public class Main {
         printExpression(massiveExp, "massiveExp");
 
         ExpressionParser polishParser = new PolishNotationParser();
+
         ExpressionParser reversePolishParser = new ReversePolishNotationParser();
 
         Expression parsed1 = polishParser.parse("1.5");
