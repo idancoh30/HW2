@@ -1,8 +1,8 @@
-public class Substraction extends Expression {
+public class Subtraction extends Expression {
     private Expression firstOp;
     private Expression secondOp;
 
-    public Substraction(Expression first, Expression second) {
+    public Subtraction(Expression first, Expression second) {
         this.firstOp = first;
         this.secondOp = second;
     }
@@ -14,7 +14,7 @@ public class Substraction extends Expression {
 
     @Override
     public String toString() {
-        return "((" + firstOp.evaluate() + ")" + " - (" + secondOp.evaluate() + "))";
+        return "("+firstOp+" - "+secondOp+")";
     }
 
 }

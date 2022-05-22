@@ -36,7 +36,7 @@ public class PolishNotationParser extends ExpressionParser {
                         stack.push(res);
                         break;
                     case "-":
-                        res = new Substraction(x,y);
+                        res = new Subtraction(x,y);
                         stack.push(res);
                         break;
                     case "-u":

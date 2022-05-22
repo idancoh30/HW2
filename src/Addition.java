@@ -10,12 +10,14 @@ public class Addition extends Expression{
 
     public double evaluate()
     {
-        return firstOp.evaluate() + secondOp.evaluate();
+        if(firstOp != null && secondOp != null)
+            return firstOp.evaluate() + secondOp.evaluate();
+        return 0;
     }
 
     public String toString()
     {
-        return "(("+firstOp.evaluate()+")"+" + ("+secondOp.evaluate()+"))";
+        return "("+firstOp+" + "+secondOp+")";
     }
 
 

@@ -12,7 +12,7 @@ public class UnaryMinus extends Expression {
 
     @Override
     public String toString() {
-        return "(-(" + opr.evaluate() + "))";
+        return "(-"+opr+")";
     }
 
 }

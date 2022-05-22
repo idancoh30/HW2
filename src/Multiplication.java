@@ -15,6 +15,6 @@ public class Multiplication extends Expression{
     @Override
     public String toString()
     {
-        return "(("+firstOp.evaluate()+")"+" * ("+secondOp.evaluate()+"))";
+        return "("+firstOp+" * "+secondOp+")";
     }
 }
