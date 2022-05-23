@@ -1,10 +1,22 @@
+/**
+ * Represents multi-addition operation between multiple operands.
+ */
 public class MultiAddition extends Expression {
     private Expression[] operands;
 
+    /**
+     * Constructor. Initializes new multi-addition
+     * @param opr - operands to be summed.
+     */
     public MultiAddition(Expression... opr) {
-        operands=opr;
+        if(opr.length > 1)
+            operands=opr;
     }
 
+    /**
+     * Evaluates
+     * @return
+     */
     public double evaluate() {
         double sum = 0;
         for (int i = 0; i < operands.length; i++) {

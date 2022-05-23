@@ -23,7 +23,7 @@ public class UnaryMinus extends Expression {
 
     /**
      * Converts the unary-minus operation into a string.
-     * @return string representation of UnaryMinus in format of "(value)"
+     * @return string representation of UnaryMinus in format of "-(value)"
      */
     @Override
     public String toString() {

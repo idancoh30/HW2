@@ -3,7 +3,8 @@ public class MultiMultiplication extends Expression{
 
     public MultiMultiplication(Expression... opr)
     {
-        operands = opr;
+        if(opr.length > 1)
+            operands = opr;
     }
 
     public double evaluate() {
