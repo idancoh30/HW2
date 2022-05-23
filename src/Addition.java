@@ -1,5 +1,5 @@
 /**
- * Represents a sum operation between two operands.
+ * Represents addition operation between two operands.
  */
 public class Addition extends Expression{
     private Expression firstOp;
@@ -28,7 +28,7 @@ public class Addition extends Expression{
     }
 
     /**
-     * Converts the Addition operation into a string.
+     * Converts the addition operation into a string.
      * @return string representation of Addition in format of "((operand1) + (operand2))".
      */
     public String toString()
