@@ -1,4 +1,12 @@
+/**
+ * Represents reverse polish notation as an expression
+ */
 public class ReversePolishNotationParser extends ExpressionParser {
+    /**
+     * Converts a string to an expression in reverse polish notation format.
+     * @param expString expression provided as a string
+     * @return expression in reverse polish notation format
+     */
     public Expression parse(String expString) {
         Expression res = new DoubleLiteral(0);
         Expression x;
@@ -17,6 +25,7 @@ public class ReversePolishNotationParser extends ExpressionParser {
             }
         }
         for (int i = 0; i < expArray.length; i++) {
+            // in case the expArray[i] is a number - add it to the stack
             if (!expArray[i].equals("*") && !expArray[i].equals("/")
                     && !expArray[i].equals("+") && !expArray[i].equals("-") && !expArray[i].equals("-u")) {
                 if(expArray[i].contains("."))
@@ -29,6 +38,7 @@ public class ReversePolishNotationParser extends ExpressionParser {
                 }
             }
             else {
+                // in case the expArray[i] is an arithmetic operation - apply it on the relevant numbers from the stack
                 mathOp = expArray[i];
                 y = stack.pop();
                 x = stack.pop();
