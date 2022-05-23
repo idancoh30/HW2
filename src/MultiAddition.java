@@ -1,5 +1,5 @@
 /**
- * Represents multi-addition operation between multiple operands.
+ * Represents addition operation between multiple operands.
  */
 public class MultiAddition extends Expression {
     private Expression[] operands;
@@ -14,8 +14,8 @@ public class MultiAddition extends Expression {
     }
 
     /**
-     * Evaluates
-     * @return
+     * Evaluates addition operation between multiple operands.
+     * @return addition result.
      */
     public double evaluate() {
         double sum = 0;
@@ -25,6 +25,10 @@ public class MultiAddition extends Expression {
         return sum;
     }
 
+    /**
+     * Converts the multiplication operation into a string.
+     * @return string representation of MultiAddition in format of "((operand1) + (operand2).... + (operandN))".
+     */
     public String toString() {
         String str = "(";
         for (int i = 0; i < operands.length; i++) {
