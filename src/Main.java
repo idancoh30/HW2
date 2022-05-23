@@ -1,10 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        ExpressionParser polishParser = new PolishNotationParser();
-        Expression parsed1 = polishParser.parse("1.5");
-        printExpression(parsed1, "parsed1", true);
-        //testPartA();
-        //testPartB();
+        testPartA();
+        testPartB();
     }
 
     private static void testPartA() {
@@ -16,6 +13,7 @@ public class Main {
         Object o2 = c2;
         System.out.println("c1 with o1: " + c1.equals(o1));
         System.out.println("o1 with c1: " + o1.equals(c1));
+
         System.out.println("c1 with ac1: " + c1.equals(ac1));
         System.out.println("ac1 with c1: " + ac1.equals(c1));
         System.out.println("c1 with c2: " + c1.equals(c2));
@@ -53,57 +51,57 @@ public class Main {
         Expression intExp2 = new IntegerLiteral(-5);
 
         Expression exp1 = new Multiplication(
-                new Addition(
-                        intExp1,
-                        doubleExp1),
-                intExp2);
+                                  new Addition(
+                                          intExp1,
+                                          doubleExp1),
+                                  intExp2);
         printExpression(exp1, "exp1");
 
         Expression exp2 = new Multiplication(
-                new Addition(
-                        intExp1,
-                        doubleExp1),
-                new UnaryMinus(
-                        new UnaryMinus(
-                                intExp2)));
+                                  new Addition(
+                                          intExp1,
+                                          doubleExp1),
+                                  new UnaryMinus(
+                                          new UnaryMinus(
+                                                  intExp2)));
         printExpression(exp2, "exp2");
 
         Expression exp3 = new Subtraction(intExp1, intExp2);
         printExpression(exp3, "exp3");
 
         Expression divisionExp = new Division(
-                new Addition(
-                        new Subtraction(
-                                new Multiplication(
-                                        intExp1,
-                                        intExp2),
-                                doubleExp1),
-                        exp2),
-                exp1);
+                                         new Addition(
+                                                 new Subtraction(
+                                                         new Multiplication(
+                                                                 intExp1,
+                                                                 intExp2),
+                                                         doubleExp1),
+                                                 exp2),
+                                         exp1);
         printExpression(divisionExp, "divisionExp");
 
         Expression multiAdd1 = new MultiAddition(
-                new DoubleLiteral(21.03),
-                new IntegerLiteral(3));
+                                       new DoubleLiteral(21.03),
+                                       new IntegerLiteral(3));
         printExpression(multiAdd1, "multiAdd1");
 
         Expression multiAdd2 = new MultiAddition(
-                new DoubleLiteral(21.03),
-                new IntegerLiteral(3),
-                new IntegerLiteral(5),
-                new DoubleLiteral(3.1415));
+                                       new DoubleLiteral(21.03),
+                                       new IntegerLiteral(3),
+                                       new IntegerLiteral(5),
+                                       new DoubleLiteral(3.1415));
         printExpression(multiAdd2, "multiAdd2");
 
         Expression multiMultiplication1 = new MultiMultiplication(new IntegerLiteral(5), new DoubleLiteral(7));
         printExpression(multiMultiplication1, "multiMultiplication1");
 
         Expression multiMultiplication2 = new MultiMultiplication(
-                new IntegerLiteral(5),
-                new DoubleLiteral(7),
-                new UnaryMinus(
-                        new Addition(
-                                new DoubleLiteral(4),
-                                new IntegerLiteral(3))));
+                                                  new IntegerLiteral(5),
+                                                  new DoubleLiteral(7),
+                                                  new UnaryMinus(
+                                                          new Addition(
+                                                                  new DoubleLiteral(4),
+                                                                  new IntegerLiteral(3))));
         printExpression(multiMultiplication2, "multiMultiplication2");
 
         Expression roundExp1 = new RoundedExpression(new DoubleLiteral(5.123456), 2);
@@ -122,24 +120,23 @@ public class Main {
         printExpression(roundExp5, "roundExp5");
 
         Expression massiveExp = new Multiplication(
-                divisionExp,
-                new UnaryMinus(
-                        new Multiplication(
-                                divisionExp,
-                                new Division(
-                                        new Addition(
-                                                new Subtraction(
-                                                        intExp1,
-                                                        intExp2),
-                                                doubleExp1),
+                                        divisionExp,
                                         new UnaryMinus(
-                                                new Division(
-                                                        new DoubleLiteral(2.17),
-                                                        new Subtraction(divisionExp, exp3)))))));
+                                                new Multiplication(
+                                                        divisionExp,
+                                                        new Division(
+                                                                new Addition(
+                                                                        new Subtraction(
+                                                                                intExp1,
+                                                                                intExp2),
+                                                                        doubleExp1),
+                                                                new UnaryMinus(
+                                                                        new Division(
+                                                                                new DoubleLiteral(2.17),
+                                                                                new Subtraction(divisionExp, exp3)))))));
         printExpression(massiveExp, "massiveExp");
 
         ExpressionParser polishParser = new PolishNotationParser();
-
         ExpressionParser reversePolishParser = new ReversePolishNotationParser();
 
         Expression parsed1 = polishParser.parse("1.5");

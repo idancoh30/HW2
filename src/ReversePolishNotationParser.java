@@ -1,11 +1,21 @@
 public class ReversePolishNotationParser extends ExpressionParser {
     public Expression parse(String expString) {
-        Expression res = new IntegerLiteral(1);
+        Expression res = new DoubleLiteral(0);
         Expression x;
         Expression y;
         String[] expArray = expString.split(" ");
         String mathOp;
         Stack<Expression> stack = new Stack<>();
+        if(expArray.length == 1)
+        {
+            if (expArray[0].contains(".")) {
+                res = new DoubleLiteral(Double.parseDouble(expArray[0]));
+                return res;
+            } else {
+                res = new IntegerLiteral(Integer.parseInt(expArray[0]));
+                return res;
+            }
+        }
         for (int i = 0; i < expArray.length; i++) {
             if (!expArray[i].equals("*") && !expArray[i].equals("/")
                     && !expArray[i].equals("+") && !expArray[i].equals("-") && !expArray[i].equals("-u")) {
@@ -41,7 +51,9 @@ public class ReversePolishNotationParser extends ExpressionParser {
                          break;
                     case "-u":
                         res = new UnaryMinus(y);
+                        stack.push(x);
                         stack.push(res);
+
                         break;
                 }
             }
