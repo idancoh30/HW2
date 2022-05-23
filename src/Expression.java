@@ -1,5 +1,5 @@
 /**
- * Expression class. Each expression can be evaluated and represented as a string.
+ * Expression is an abstract class. Each expression can be evaluated and represented as a string.
  */
 public abstract class Expression {
     public abstract double evaluate();

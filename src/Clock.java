@@ -1,5 +1,3 @@
-import java.util.Objects;
-
 /**
  * Represents a clock with hours and minutes.
  */
@@ -7,9 +5,9 @@ public class Clock {
     private int hours, minutes;
 
     /**
-     * Initializes a new clock and sets time to hours:minutes.
-     * @param hours Hours of the new clock.
-     * @param minutes Minutes of the new clock.
+     * Constructor. Initializes a new clock and sets time to hours:minutes.
+     * @param hours - hours of the new clock.
+     * @param minutes - minutes of the new clock.
      */
     public Clock(int hours, int minutes) {
         if (hours < 0 || hours > 23)
@@ -23,7 +21,7 @@ public class Clock {
     }
 
     /**
-     * Initializes a new clock and sets time to 00:00.
+     * Default constructor. Initializes a new clock and sets time to 00:00.
      */
     public Clock() {
         this.hours = 0;
@@ -51,8 +49,10 @@ public class Clock {
     }
 
     /**
-     * * @param other
-     * @return
+     * Indicates whether some other object is "equal to" this one.
+     * Implements an equivalence relation on non-null object references.
+     * @param other - the reference object with which to compare.
+     * @return true if this object is the same as the other argument; false otherwise.
      */
     @Override
     public boolean equals(Object other) {
@@ -63,7 +63,10 @@ public class Clock {
     }
 
 
-    // Count minutes passed from 00:00
+    /**
+     * Returns a hashCode value for the object.
+     * @return a hashCode value for the object.
+     */
     @Override
     public int hashCode() {
         return 60 * hours + minutes;
