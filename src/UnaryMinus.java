@@ -1,3 +1,6 @@
+/**
+ * Represents a
+ */
 public class UnaryMinus extends Expression {
 
     private Expression opr;
